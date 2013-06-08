@@ -12,7 +12,7 @@
     <script src="javascripts/chosen.jquery.min.js" type="text/javascript"></script>
 
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <script src="javascripts/main.js"></script>
+    <script src="javascripts/new.js"></script>
     <link href="stylesheets/main.css" rel="stylesheet">    
     <link href="stylesheets/chosen.css" rel="stylesheet">
   </head>
@@ -25,31 +25,42 @@
                 <div class="span3"></div>
                 <div class="span6 inner">
                   <h1 id="project_title">4Kiez</h1>
-                  <h2 id="project_tagline">Reclaim your neighbourhood.</h2>  
+                  <h2 id="project_tagline">Create your cause...</h2>  
                 </div>
                 <div class="span3"></div>
             </div>
                 <div class="row-fluid" id="main_content_wrap">
                     <div class="span3"></div>
-                    <div class="span3">
-                        <h2>Create A Cause</h2>
-                        If you want to create a cause just click below
-                        <a href="new.html" class="btn btn-inverse">Create a new Cause</a>
-                    </div>
-                    <div class="span3">
-                        <h2>Support a Cause</h2>
-                    </div>
-                    <div class="span3"></div>
-                </div>
-                <div class="row-fluid" id="main_content_wrap">
-                    <div class="span3"></div>
                     <div class="span6">
-                         <form class="form-horizontal loginform">
+                         <form class="form-horizontal" id="formNewItem">
                             <div class="control-group">
+                                <label class="control-label">ZIP:</label>
                                 <div class="controls">
-                                    <input type="text" data-provide="typeahead" placeholder="type in your zipcode..." class="input-xlarge">
-
-                                    <button class="btn btn-success btn-large">Go</button>
+                                    <input type="text" data-provide="typeahead" placeholder="type in your zipcode..." class="input-xlarge" id="inputZIP">
+                                </div>
+                            </div>
+                             <div class="control-group">
+                                <label class="control-label">Name</label>
+                                <div class="controls">
+                                    <input type="text" data-provide="typeahead" placeholder="what is the name of your cause" class="input-xlarge" id="inputName">
+                                </div>
+                            </div>
+                             <div class="control-group">
+                                <label class="control-label">Description</label>
+                                <div class="controls">
+                                    <textarea rows="8" cols="50" id="inputDescription"></textarea>
+                                </div>
+                            </div>
+                             <div class="control-group">
+                                <label class="control-label">Image</label>
+                                <div class="controls">
+                                    <input type="file">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label"></label>
+                                <div class="controls">
+                                    <button type="submit" class="btn btn-success" id="createNewItem">Submit</button> <button type="reset" class="btn btn-danger">Reset</button>
                                 </div>
                             </div>
                         </form>
