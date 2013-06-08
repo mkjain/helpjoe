@@ -7,6 +7,7 @@
     <meta name="description" content="4Kiez - Reclaim your neighbourhood!" />
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
     <script type='text/javascript' src='https://cdn.firebase.com/v0/firebase.js'></script>
+    <script type='text/javascript' src='https://cdn.firebase.com/v0/firebase-auth-client.js'></script>
     <title>4Kiez</title>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" type="text/javascript"></script>
     <script src="javascripts/chosen.jquery.min.js" type="text/javascript"></script>
@@ -32,7 +33,7 @@
                                         <input style="margin-bottom: 15px;" type="text" placeholder="Username" id="createUsername" name="username"><br/>
                                         <input style="margin-bottom: 15px;" type="password" placeholder="Password" id="createPassword">
                                         <input style="margin-bottom: 15px;" type="password" placeholder="Repeat Password" id="createRepeatPassword">
-                                        <input class="btn btn-primary btn-block" type="submit" value="Sign Up" id="CreateAccount">
+                                        <input class="btn btn-primary btn-block" type="button" value="Sign Up" id="CreateAccount">
                                 </form>
                         </div>
                 </li>
@@ -44,7 +45,7 @@
                                         <input style="margin-bottom: 15px;" type="password" placeholder="Password" id="loginPassword" name="password">
                                         <input style="float: left; margin-right: 10px;" type="checkbox" name="remember-me" id="loginRemember-me" value="1">
                                         <label class="string optional" for="user_remember_me"> Remember me</label>
-                                        <input class="btn btn-primary btn-block" type="submit" value="Sign In" id="SignIn">
+                                        <input class="btn btn-primary btn-block" type="button" value="Sign In" id="SignIn">
                                 </form>
                         </div>
                 </li>

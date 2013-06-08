@@ -1,5 +1,7 @@
 var kiezDAO;
 
+var fileReader = new FileReader ();
+
 $(document).ready (function () {
     console.log ("running the new script");
     
@@ -9,7 +11,7 @@ $(document).ready (function () {
     $("#createNewItem").click(function () {
         var zip = $("#inputZIP").val ();
         var name = $("#inputName").val ();
-        var description = $("#inputDescription").val ();      
+        var description = $("#inputDescription").val ();
         
         kiezDAO.child (zip).push ({name : name, description : description, vote : 0}); 
         
