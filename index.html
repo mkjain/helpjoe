@@ -20,54 +20,62 @@
   </head>
 
   <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <h1 id="project_title">4Kiez</h1>
-          <h2 id="project_tagline">Reclaim your neighbourhood.</h2>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-        <div class="row-fluid">
-            <div class="span3"></div>
-            <div class="span6">
-                <br/>
-                 <form class="form-horizontal loginform">
-                     <div class="control-group">
-                         <label class="control-label" for="inputEmail"></label>
-                         <div class="controls">
-                             <br/><br/>
-                         </div> 
-                     </div>
-                    <div class="control-group">
-                        <label class="control-label" for="inputEmail">Your ZIP Code</label>
-                        <div class="controls">
-                            <input type="text" id="inputZIP" placeholder="Your ZIP-Code"> <button class="btn btn-primary">Go</button>
-                        </div>
-                    </div>
-                    <div class="control-group">
-                         <label class="control-label" for="inputEmail"></label>
-                         <div class="controls">
-                             <br/><br/><br/>
-                         </div> 
-                    </div>
-                </form>
+      
+      <div class="container-fluid">
+            <!-- HEADER -->
+            <div class="row-fluid">
+                <header class="inner">
+                  <h1 id="project_title">4Kiez</h1>
+                  <h2 id="project_tagline">Reclaim your neighbourhood.</h2>
+                </header>
             </div>
-            <div class="span3"></div>
-        </div>
-       
-    </div>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">4Kiez maintained by <a href="https://github.com/mkjain">mkjain</a></p>
-      </footer>
-    </div>
+            <!-- MAIN CONTENT -->
+            <div id="main_content_wrap" class="outer">
+                <div class="row-fluid">
+                    <div class="span3"></div>
+                    <div class="span6">
+                        <br/>
+                         <form class="form-horizontal loginform">
+                             <div class="control-group">
+                                 <div class="controls">
+                                     <br/><br/>
+                                 </div> 
+                             </div>
+                            <div class="control-group">
+                                <label class="control-label" for="inputEmail">Your ZIP Code</label>
+                                <div class="controls">
+                                    <select id="inputZIP">
+                                        <option>10963</option>
+                                    </select>
 
+                                    <button class="btn btn-primary">Go</button>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                 <div class="controls">
+                                     <br/><br/><br/>
+                                 </div> 
+                            </div>
+                        </form>
+                    </div>
+                    <div class="span3"></div>
+                </div>
+
+            </div>
+
+            <!-- FOOTER  -->
+            <div id="footer_wrap" class="outer">
+              <footer class="inner">
+                <p class="copyright">4Kiez maintained by <a href="https://github.com/mkjain">mkjain</a> made with lots of coffein</p>
+              </footer>
+            </div>
+
+          
+          
+      </div>
+
+  
     
         <script src="bootstrap/js/bootstrap.min.js"></script>
   </body>
