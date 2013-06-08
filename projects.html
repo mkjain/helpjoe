@@ -1,74 +1,58 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="4Kiez - Reclaim your neighbourhood!" />
+<head>
+  <meta charset='utf-8' />
+  <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+  <meta name="description" content="4Kiez - Reclaim your neighbourhood!" />
+  <title>4Kiez</title>
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <script src="javascripts/main.js"></script>
+</head>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-    <script type='text/javascript' src='https://cdn.firebase.com/v0/firebase.js'></script>
-    <title>4Kiez</title>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-    <script src="javascripts/chosen.jquery.min.js"></script>
-    <script src="https://github.com/allmarkedup/purl/blob/master/purl.js"></script>
-
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <script src="javascripts/main.js"></script>
-    <link href="stylesheets/main.css" rel="stylesheet">    
-    <link href="stylesheets/chosen.css" rel="stylesheet">
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <h1 id="project_title">4Kiez</h1>
-          <h2 id="project_tagline">Reclaim your neighbourhood.</h2>
-        </header>
+<body>
+  <div class="navbar navbar-inverse">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="brand" href="#">4Kiez</a>
+      </div>
     </div>
+  </div>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-        <div class="row-fluid">
-            <div class="span3"></div>
-            <div class="span6">
-                <br/>
-                 <form class="form-horizontal loginform">
-                     <div class="control-group">
-                         <label class="control-label" for="inputEmail"></label>
-                         <div class="controls">
-                             <br/><br/>
-                         </div> 
-                     </div>
-                    <div class="control-group">
-                        <label class="control-label" for="inputEmail">Your ZIP Code</label>
-                        <div class="controls">
-                            <input type="text" id="inputZIP" placeholder="Your ZIP-Code"> <button class="btn btn-primary">Go</button>
-                        </div>
-                    </div>
-                    <div class="control-group">
-                         <label class="control-label" for="inputEmail"></label>
-                         <div class="controls">
-                             <br/><br/><br/>
-                         </div> 
-                    </div>
-                </form>
+  <div class="container">
+    <div class="row">
+     <div class="accordion" id="accordion2">
+      <div class="accordion-group">
+        <div class="accordion-heading">
+          <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+          <div class="container">
+            <div class="row">
+              <div class="span2">
+                <img src="http://placehold.it/140x140" class="img-circle">
+              </div>
+              <div class="span10">
+                 <h2>Title</h2>
+              <p>Lorem upsim</p>
+              <span class="label">. . .</span>
+              </div>
             </div>
-            <div class="span3"></div>
+          </div>
+           
+          </a>
         </div>
-       
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">4Kiez maintained by <a href="https://github.com/mkjain">mkjain</a></p>
-      </footer>
-    </div>
-
-    
-        <script src="bootstrap/js/bootstrap.min.js"></script>
-  </body>
+        <div id="collapseOne" class="accordion-body collapse in">
+          <div class="accordion-inner">
+            Anim pariatur cliche...
+          </div>
+        </div>
+      </div>
+    </div>   
+  </div>
+  <script type='text/javascript' src='https://cdn.firebase.com/v0/firebase.js'></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script src="https://github.com/allmarkedup/purl/blob/master/purl.js"></script>
+  <script src="javascripts/bootstrap-collapse.js"></script>
+  <script src="javascripts/main.js"></script>
+</body>
 </html>
