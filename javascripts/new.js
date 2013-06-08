@@ -13,6 +13,6 @@ $(document).ready (function () {
         
         kiezDAO.child (zip).push ({name : name, description : description, vote : 0}); 
         
-        window.location = "file:///home/farhad/NetBeansProjects/4kiez/helpjoe/projects.html?zip=" + zip;
+        window.location = "http://www.4kiez.de/projects.html?zip=" + zip;
     });
 });
