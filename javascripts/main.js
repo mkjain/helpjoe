@@ -20,9 +20,8 @@ $(document).ready (function () {
     });
     
      $("#GoAction").click (function () {
-        window.location = "http://www.4kiez.de/projects.html?zip=" + $("#inputZIP").val ();    
+        window.location = "projects.html?zip=" + $("#inputZIP").val ();    
     });
-
     
     $("#CreateAccount").click (function () {
         console.log ("Creating an account");
