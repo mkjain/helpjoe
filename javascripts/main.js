@@ -21,7 +21,7 @@ $(document).ready (function () {
     
      $("#GoAction").click (function () {
         console.log ("Changing location");
-        window.location = "projects.html?zip=" + $("#inputZIP").val ();    
+        window.location.href = "http://www.4kiez.de/projects.html?zip=" + $("#inputZIP").val ();    
     });
     
     $("#CreateAccount").click (function () {
