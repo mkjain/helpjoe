@@ -1,8 +1,15 @@
 var kiezDAO;
 var authClient;
 
+    
+    
 $(document).ready (function () {
     console.log ("running the startup script");
+    
+    $("#GoAction").click (function () {
+            console.log ("Changing location");
+            window.location.href = "http://www.4kiez.de/projects.html?zip=" + $("#inputZIP").val ();    
+     });
     
     fireurl =  'https://4kiez.firebaseio.com';
     kiezDAO = new Firebase(fireurl);
@@ -19,11 +26,7 @@ $(document).ready (function () {
       }
     });
     
-     $("#GoAction").click (function () {
-        console.log ("Changing location");
-        window.location.href = "http://www.4kiez.de/projects.html?zip=" + $("#inputZIP").val ();    
-    });
-    
+     
     $("#CreateAccount").click (function () {
         console.log ("Creating an account");
         var pass = $("#createPassword").val ();
