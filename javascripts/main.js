@@ -20,6 +20,7 @@ $(document).ready (function () {
     });
     
      $("#GoAction").click (function () {
+        console.log ("Changing location");
         window.location = "projects.html?zip=" + $("#inputZIP").val ();    
     });
     
