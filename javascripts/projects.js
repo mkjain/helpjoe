@@ -6,6 +6,26 @@ $(document).ready (function () {
     
     var zipCode = getQueryVariable("zip");
     
+    $("#uploadImage").click (function () {
+        console.log ("uploadImage");
+        filepicker.setKey('ApwLQtdpTM6omKwCw8DyQz');
+                
+        filepicker.pickAndStore({mimetype:"image/*"},
+             {location:"S3"}, function(fpfiles){                            
+                  imgPath = FPFile.url;
+        });
+     });
+     
+     $("#createNewItem").click(function () {
+        var zip = $("#inputZIP").val ();
+        var name = $("#inputName").val ();
+        var description = $("#inputDescription").val ();
+        
+        kiezDAO.child (zip).push ({name : name, description : description, vote : 0, imgPath : imgPath}); 
+
+        window.location = "http://www.4kiez.de/projects.html?zip=" + zip;
+    });
+    
     if (zipCode == null) {
         location.href = "index.html";
     }

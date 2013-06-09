@@ -1,7 +1,6 @@
 var kiezDAO;
 var authClient;
-
-    
+var imgPath;    
     
 $(document).ready (function () {
     console.log ("running the startup script");
