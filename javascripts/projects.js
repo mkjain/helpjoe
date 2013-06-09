@@ -8,16 +8,14 @@ $(document).ready (function () {
     var zipCode = getQueryVariable("zip");
     
     $("#uploadImage").click (function () {
-        console.log ("uploadImage");
         filepicker.setKey('ApwLQtdpTM6omKwCw8DyQz');
                 
         filepicker.pickAndStore({mimetype:"image/*"},
              {location:"S3"}, function(fpfiles){
-                 console.log (imgPath);
-                  imgPath = fpfiles[0].url;
+                 console.log(JSON.stringify(fpfiles));
+                  imgPath = (fpfiles[0]).url;
         },function (errors) {
                 console.log(errors);
-            
         });
      });
      
@@ -26,9 +24,11 @@ $(document).ready (function () {
         var name = $("#inputName").val ();
         var description = $("#inputDescription").val ();
         
+        console.log (imgPath);
+        
         kiezDAO.child (zip).push ({name : name, description : description, vote : 0, imgPath : imgPath}); 
 
-        window.location = "http://www.4kiez.de/projects.html?zip=" + zip;
+        //window.location = "http://www.4kiez.de/projects.html?zip=" + zip;
     });
     
     if (zipCode == null) {
