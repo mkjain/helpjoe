@@ -19,8 +19,8 @@
     <div class="row" style="background-color: #212121;">
       <div class="span12">
           <br>
-        <h1 id="project_title">4Kiez</h1>
-        <h2 id="project_tagline">Reclaim your neighbourhood! Loading projects...</h2>
+        <h1 id="project_title" style="color:#f5f5f5;">4Kiez</h1>
+        <h2 id="project_tagline" style="color:#f5f5f5;">Reclaim your neighbourhood! Loading projects...</h2>
          </div>
     </div>
      <div class="row">
@@ -56,26 +56,27 @@
       <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
           <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-              <h3 id="myModalLabel">Modal header</h3>
+              <h3 id="myModalLabel">Create a new project</h3>
+              <p>Add a project that will help your local community - if enough people vote for it - we'll try and realize it!</p>
           </div>
           <div class="modal-body">
                       <form class="form-horizontal" id="formNewItem">
                           <div class="control-group">
                               <label class="control-label">ZIP:</label>
                               <div class="controls">
-                                  <input type="text" data-provide="typeahead" placeholder="type in your zipcode..." class="input-xlarge" id="inputZIP">
+                                  <input type="text" data-provide="typeahead" placeholder="Which zip code is the project in?" class="input-xlarge" id="inputZIP">
                               </div>
                           </div>
                           <div class="control-group">
                               <label class="control-label">Name</label>
                               <div class="controls">
-                                  <input type="text" data-provide="typeahead" placeholder="what is the name of your cause" class="input-xlarge" id="inputName">
+                                  <input type="text" data-provide="typeahead" placeholder="Give the project a title" class="input-xlarge" id="inputName">
                               </div>
                           </div>
                           <div class="control-group">
                               <label class="control-label">Description</label>
                               <div class="controls">
-                                  <textarea rows="8" cols="50" id="inputDescription"></textarea>
+                                  <textarea rows="8" cols="50" id="inputDescription" placeholder="Describe the project & try to convince others to fund it too.."></textarea>
                               </div>
                           </div>
                           <div class="control-group">
@@ -88,7 +89,7 @@
                           <div class="control-group">
                               <label class="control-label"></label>
                               <div class="controls">
-                                  <a href="javascript:void" class="btn btn-success" id="createNewItem">Submit</a> <button type="reset" class="btn btn-danger">Reset</button>
+                                  <a href="#" class="btn btn-success" id="createNewItem">Submit</a>
                               </div>
                           </div>
                       </form>
