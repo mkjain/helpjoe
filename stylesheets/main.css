@@ -3,3 +3,26 @@
     background-repeat: no-repeat;
     height: 200px;
 }
+
+ body{
+     background-image: url(../images/bg.png);
+ }
+
+ .accordion-heading{
+     background: #f9f9f9;
+     color: #282828;
+ }
+
+ .accordion-inner{
+     background: #f8f8f8;
+ }
+
+ .shadow{
+     box-shadow: 1px 1px 3px #888;
+
+ }
+
+ .big-image{
+     width: 240px;
+     height: 240px;
+ }

@@ -2,6 +2,31 @@ var kiezDAO;
 var projectCount=1;
 var imgPath = "";
 
+String.prototype.toTitleCase = function () {
+    var i, str, lowers, uppers;
+    str = this.replace(/([^\W_]+[^\s-]*) */g, function (txt) {
+        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+    });
+
+    // Certain minor words should be left lowercase unless
+    // they are the first or last words in the string
+    lowers = ['A', 'An', 'The', 'And', 'But', 'Or', 'For', 'Nor', 'As', 'At',
+        'By', 'For', 'From', 'In', 'Into', 'Near', 'Of', 'On', 'Onto', 'To', 'With'];
+    for (i = 0; i < lowers.length; i++)
+        str = str.replace(new RegExp('\\s' + lowers[i] + '\\s', 'g'),
+            function (txt) {
+                return txt.toLowerCase();
+            });
+
+    // Certain words such as initialisms or acronyms should be left uppercase
+    uppers = ['Id', 'Tv'];
+    for (i = 0; i < uppers.length; i++)
+        str = str.replace(new RegExp('\\b' + uppers[i] + '\\b', 'g'),
+            uppers[i].toUpperCase());
+
+    return str;
+};
+
 $(document).ready (function () {
     console.log ("running the projecth script");
     
@@ -57,7 +82,7 @@ $(document).ready (function () {
 
         kiezDAO.on('child_added',function (snapshot, prevSnapShot) {
             var msgData = snapshot.val();
-            $("#project_tagline").html ("There are "+ projectCount + " projects for " + zipCode);
+            $("#vote-text").html ("There are "+ projectCount + " projects for " + zipCode);
             console.log(msgData);
             $("#project_list").append (renderProjects(msgData));
         });
@@ -79,14 +104,15 @@ function getQueryVariable(variable) {
 
 function renderProjects(data) {
     var image = data.imgPath ? data.imgPath : "http://placehold.it/120x120";
-    var accordionInner = "";
+    var accordionInner = '<div class=\'row\'><div class=\'span3\'><img src=\"'+image+'\" class=\'img-polaroid big-image\'/></div><div class=\'span7\'><h1>'+data.name.toTitleCase()+'</h1><h4>'+data.description+'</h4></div></div>';
 
     var smallDesc = data.description.substr(0,150);
     if (data.description.length > 150){
         smallDesc+="...";
     }
     $("#spinner").remove();
-    var code = "<div class=\'row\'><div class=\'accordion\' id=\'accordion"+projectCount+"\'><div class=\'accordion-group\'><div class=\'accordion-heading\'><div class=\'container\'><div class=\'row accordion-toggle\'><div class=\'span2\'><img src=\'"+image+"\' class=\'img-polaroid\' style=\'width:120px;height:120px;\'></div><div class=\'span9\'><h2>"+data.name+"</h2><p>"+smallDesc+"</p><br><a class=\'well pull-right pagination-centered\' data-toggle=\'collapse\' data-parent=\'#accordion"+projectCount+"\' href=\'#collapse"+projectCount+"\'> Read More</a></div></div></div></div><div id=\'collapse"+projectCount+"\' class=\'accordion-body collapse\'><div class=\'accordion-inner\'>"+accordionInner+"</div></div></div>";
+    var code;
+    code = '<div class=\'row\'><div class=\'span12\'><div class=\'accordion\' id=\'accordion' + projectCount + "\'><div class=\'accordion-group shadow\'><div class=\'accordion-heading\'><div class=\'container\'><div class=\'row accordion-toggle\'><div class=\'span2\'><img src=\'" + image + "\' class=\'img-polaroid\' style=\'width:120px;height:120px;\'></div><div class=\'span9\'><h2>" + data.name.toTitleCase() + "</h2><p>" + smallDesc + "</p><br><a class=\'btn pull-right pagination-centered\' data-toggle=\'collapse\' data-parent=\'#accordion" + projectCount + "\' href=\'#collapse" + projectCount + "\'> Read More</a></div></div></div></div><div id=\'collapse" + projectCount + "\' class=\'accordion-body collapse\'><div class=\'accordion-inner\'>" + accordionInner + "</div></div></div></div>";
     projectCount++;
     return code;
 }
