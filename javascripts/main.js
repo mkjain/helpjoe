@@ -8,13 +8,14 @@ $(document).ready (function () {
     
     $("#GoAction").click (function () {
             console.log ("Changing location");
-            window.location.href = "projects.html?zip=" + $("#inputZIP").val ();    
+            window.location.href = "projects.html?zip=" + $("#inputZIP").val (); 
      });
      
-     $("#inputZIP").keypress(function(event){
-        console.log ("enter");
+     $("#inputZIP").keydown(function(event){
+         console.log(event.keyCode);
         if(event.keyCode == 13){
-            $("#GoAction").click();
+            console.log ("enter");
+            window.location.href = "projects.html?zip=" + $("#inputZIP").val (); 
         }
     });
     

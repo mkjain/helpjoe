@@ -9,13 +9,9 @@ $(document).ready (function () {
     $("#createNewItem").click(function () {
         var zip = $("#inputZIP").val ();
         var name = $("#inputName").val ();
-        var description = $("#inputDescription").val ();
-        
-        var input = document.getElementById("file-upload");
-        
+        var description = $("#inputDescription").val ();        
         var imgPath = "";
         
-         
            var input = document.getElementById("upload-file");
            
             if (!input.value) {
