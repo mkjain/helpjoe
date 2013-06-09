@@ -7,6 +7,7 @@
     <meta name="description" content="4Kiez - Reclaim your neighbourhood!"/>
     <title>4Kiez</title>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
     <link href="stylesheets/main.css" rel="stylesheet">
 
 </head>
@@ -15,39 +16,33 @@
 <div class="container shadow" id="top-container">
     <!-- HEADER -->
     <div class="row">
-        <div class="span12 pull-left" id="header-img">
-            <h1 id="project_title">4Kiez</h1>
-
-            <h3 id="project_tagline">Reclaim your neighbourhood!</h3>
+        <div class="span12 pull-left hidden-phone" id="header-img">
+            <h1>4Kiez</h1>
+            <h4>Reclaim your neighbourhood!</h4>
 
         </div>
-
+        <div class="span12 pull-left hidden-desktop hidden-tablet">
+            <h1>4Kiez</h1>
+            <h4>Reclaim your neighbourhood!</h4>
+        </div>
     </div>
     <hr/>
     <div class="row">
-        <div class="span3"></div>
-        <div class="span3">
+        <div class="span4">
+            <h3>Via 4Kiez you can decide which local projects you would like the government to invest in - by putting your money where your mouth is (each vote costs 1 €) you not only help the project but also show your commitment.</h3>
         </div>
-        <div class="span3">
-            <h2>Support a Cause</h2>
-        </div>
-        <div class="span3"></div>
-    </div>
-    <div class="row-fluid">
-        <div class="span3"></div>
-        <div class="span6">
+        <div class="span8 pagination-centered">
             <div class="form-horizontal loginform">
                 <div class="control-group">
+                    <label class="control-label">Get started! Enter your ZIP:</label>
                     <div class="controls">
-                        <input type="text" data-provide="typeahead" placeholder="type in your zipcode..."
-                               class="input-xlarge" id="inputZIP">
-
-                        <a class="btn btn-success btn-large" id="GoAction">Go</a>
+                        <input type="text" data-provide="typeahead" placeholder="e.g. 13086"
+                               class="input-large" id="inputZIP">
+                        <a class="btn btn-success" id="GoAction">Go</a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="span3"></div>
     </div>
 </div>
 
