@@ -3,7 +3,7 @@ var kiezDAO;
 $(document).ready (function () {
     console.log ("running the projecth script");
     
-    zipCode = getQueryVariable("zip");
+    var zipCode = getQueryVariable("zip");
     
     if (zipCode == null) {
         location.href = "index.html";
@@ -11,7 +11,7 @@ $(document).ready (function () {
     else {
         $("#project_tagline").html ("Projects for " + zipCode);
     
-        fireurl = 'https://4kiez.firebaseio.com/zips/' + zipCode;
+        var fireurl = 'https://4kiez.firebaseio.com/zips/' + zipCode;
 
         kiezDAO = new Firebase(fireurl);
 
