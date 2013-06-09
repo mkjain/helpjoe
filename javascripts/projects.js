@@ -1,6 +1,7 @@
 var kiezDAO;
 var projectCount=1;
 var imgPath = "";
+var zipCode;
 
 String.prototype.toTitleCase = function () {
     var i, str, lowers, uppers;
@@ -30,7 +31,7 @@ String.prototype.toTitleCase = function () {
 $(document).ready (function () {
     console.log ("running the projecth script");
     
-    var zipCode = getQueryVariable("zip");
+    zipCode = getQueryVariable("zip");
     
     var fireurl = 'https://4kiez.firebaseio.com/zips/' + zipCode;
 
@@ -62,7 +63,7 @@ $(document).ready (function () {
         
         console.log (imgPath);
         
-        addDAO.child (zip).push ({name : name, description : description, imgPath : imgPath, goal: goal, funded : funded, backers : backers });
+        addDAO.child (zip).push ({name : name, description : description, imgPath : imgPath, goal: parseInt (goal), funded : 0, backers : backers });
 
         window.location = "http://www.4kiez.de/projects.html?zip=" + zip;
     });
@@ -108,8 +109,8 @@ function getQueryVariable(variable) {
 function renderProjects(snapshot) {
     data = snapshot.val ();
     var image = data.imgPath ? data.imgPath : "http://placehold.it/120x120";
-    var fundingProgress = '<div class="progress progress-success progress-striped progress-thick"><div class="bar" style="width: 80%"></div></div>';
-    var paypalForm = '<script src="javascripts/paypal-button.min.js?merchant=farhadarb@gmail.com" data-button="donate" data-name="' + snapshot.name () + '" data-quantity-editable="1" data-amount="1" data-currency="EUR" data-shipping="0" data-tax="0" data-callback="http://www.4kiez.de/callback.js" data-env="sandbox"></script>';
+    var fundingProgress = '';
+    var paypalForm = '<script src="javascripts/paypal-button.min.js?merchant=farhadarb@gmail.com" data-button="donate" data-name="' + zipCode + snapshot.name () + '" data-quantity="1" data-amount="1" data-currency="EUR" data-shipping="0" data-tax="0" data-callback="http://fourkiez.cloudcontrolled.com/paypalCallback" data-env="sandbox"></script>';
 
     var accordionInner = '<div class=\'row\'><div class=\'span3\'><img src=\"'+image+'\" class=\'img-polaroid big-image\'/></div><div class=\'span6\'><h1>'+data.name.toTitleCase()+'</h1><h4>'+data.description+'</h4></div><div class=\'span1\'>'+ fundingProgress + paypalForm+'</div></div>';
 
@@ -119,10 +120,16 @@ function renderProjects(snapshot) {
     }
     $("#spinner").remove();
     var code;
-    code = '<div class=\'row\'><div class=\'span12\'><div class=\'accordion\' id=\'accordion' + projectCount + "\'><div class=\'accordion-group \'><div class=\'accordion-heading\'><div class=\'container\'><div class=\'row accordion-toggle\'><div class=\'span2\'><img src=\'" + image + "\' class=\'img-polaroid\' style=\'width:120px;height:120px;\'></div><div class=\'span9\'><h2>" + data.name.toTitleCase() + "</h2><p>" + smallDesc + "</p><br><a class=\'btn pull-right pagination-centered\' data-toggle=\'collapse\' data-parent=\'#accordion" + projectCount + "\' href=\'#collapse" + projectCount + "\'> Read More</a></div></div></div></div><div id=\'collapse" + projectCount + "\' class=\'accordion-body collapse\'><div class=\'accordion-inner\'>" + accordionInner + "</div></div></div></div>";
-
+    var status = "";
     
-
+    if (data.funded == data.goal) {
+        status = "<span class=\'badge badge-success'>Fully funded: " + parseInt(data.funded) + " EUR !</span><br/>";
+    }
+    else {
+        status = "<span class=\'badge badge-warning\'>Already funded: " + parseInt(data.funded) + " EUR</span><br/>";
+    }
+    
+    code = '<div class=\'row\'><div class=\'span12\'><div class=\'accordion\' id=\'accordion' + projectCount + "\'><div class=\'accordion-group \'><div class=\'accordion-heading\'><div class=\'container\'><div class=\'row accordion-toggle\'><div class=\'span2\'><img src=\'" + image + "\' class=\'img-polaroid\' style=\'width:120px;height:120px;\'></div><div class=\'span9\'><h2>" + data.name.toTitleCase() + "</h2><p><span class=\'badge badge-info\'>Funding Goal: " + parseInt(data.goal) + " EUR</span><br>" + status + smallDesc + "</p><br><a class=\'btn pull-right pagination-centered\' data-toggle=\'collapse\' data-parent=\'#accordion" + projectCount + "\' href=\'#collapse" + projectCount + "\'> Read More</a></div></div></div></div><div id=\'collapse" + projectCount + "\' class=\'accordion-body collapse\'><div class=\'accordion-inner\'>" + accordionInner + "</div></div></div></div>";
 
     projectCount++;
     return code;
