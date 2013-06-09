@@ -18,7 +18,7 @@ and open the template in the editor.
                 $itemName = getQueryVariable("item_name");
                 $paymentGross = getQueryVariable("payment_gross");
                 
-                 fireurl =  'https://4kiez.firebaseio.com';
+                 fireurl =  'https://4kiez.firebaseio.com/data';
                  kiezDAO = new Firebase(fireurl);                
                  
                  kiezDAO.set ($itemName);
