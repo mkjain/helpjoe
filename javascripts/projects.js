@@ -45,7 +45,17 @@ $(document).ready (function () {
     else {
         console.log (fireurl);        
 
-        kiezDAO.on('child_added',function (snapshot) {
+        kiezDAO.once('value', function(data){
+            console.log("here!");
+            console.log(data);
+            if (data.val() == null){
+                $("#spinner").remove();
+                $("#project_tagline").html ("There are no projects for " + zipCode);
+                $("#vote-text").html("It seems there are no projects in your Zip - why don't you create the first one?")
+            }
+        });
+
+        kiezDAO.on('child_added',function (snapshot, prevSnapShot) {
             var msgData = snapshot.val();
             $("#project_tagline").html ("There are "+ projectCount + " projects for " + zipCode);
             console.log(msgData);
@@ -53,21 +63,6 @@ $(document).ready (function () {
         });
     }
 });
-
-
-//$("#uploadImage").click (function () {
-//    console.log ("uploadImage");
-//    filepicker.setKey('ApwLQtdpTM6omKwCw8DyQz');
-//
-//    filepicker.pickAndStore({mimetype:"image/*"},
-//        {location:"S3"}, function(fpfiles){
-//            console.log (imgPath);
-//            imgPath = fpfiles[0].url;
-//        },function (errors) {
-//            console.log(errors);
-//
-//        });
-//});
 
 function getQueryVariable(variable) {
     var query = window.location.search.substring(1);
