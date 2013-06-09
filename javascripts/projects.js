@@ -47,7 +47,7 @@ function addItem (zip,name,description,votes) {
 function renderProjects(data) {
     var image = data.imgPath ? data.imgPath : "http://placehold.it/120x120";
     var accordionInner = "";
-    
+
     var smallDesc = data.description.substr(0,150);
     if (data.description.length > 150){
         smallDesc+="...";

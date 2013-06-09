@@ -28,9 +28,11 @@
              <h2>Vote For Your Favorite Projects:</h2>
          </div>
          <div class="span3">
+             <a href="#myModal" role="button" data-toggle="modal">
              <div class="well btn-success pagination-centered" href="#">
                  <i class="icon-plus-sign icon-white"></i> Add A Project
              </div>
+             </a>
          </div>
       </div>
     <div class="container" id="project_list">
@@ -49,6 +51,50 @@
 
       <!-- this is where the project list goes -->
     </div>
+
+      <!--modal for new projects-->
+      <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+              <h3 id="myModalLabel">Modal header</h3>
+          </div>
+          <div class="modal-body">
+                      <form class="form-horizontal" id="formNewItem">
+                          <div class="control-group">
+                              <label class="control-label">ZIP:</label>
+                              <div class="controls">
+                                  <input type="text" data-provide="typeahead" placeholder="type in your zipcode..." class="input-xlarge" id="inputZIP">
+                              </div>
+                          </div>
+                          <div class="control-group">
+                              <label class="control-label">Name</label>
+                              <div class="controls">
+                                  <input type="text" data-provide="typeahead" placeholder="what is the name of your cause" class="input-xlarge" id="inputName">
+                              </div>
+                          </div>
+                          <div class="control-group">
+                              <label class="control-label">Description</label>
+                              <div class="controls">
+                                  <textarea rows="8" cols="50" id="inputDescription"></textarea>
+                              </div>
+                          </div>
+                          <div class="control-group">
+                              <label class="control-label">Image Upload</label>
+                              <div class="controls">
+                                  <input type="file" id="upload-file" />
+                              </div>
+                          </div>
+                          <div class="control-group">
+                              <label class="control-label"></label>
+                              <div class="controls">
+                                  <a href="javascript:void" class="btn btn-success" id="createNewItem">Submit</a> <button type="reset" class="btn btn-danger">Reset</button>
+                              </div>
+                          </div>
+                      </form>
+             </div>
+          </div>
+      </div>
+      <!--modal for new projects-->
 
   </div>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
