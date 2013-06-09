@@ -25,6 +25,12 @@ $(document).ready (function () {
                         
                         var imgPath = FPFile.url;
                         
+                        filepicker.convert (FPFile, {width: 200, height: 200},
+                        function(newFPFile){
+                            console.log(newFPFile.url);
+                            result.src = newFPFile.url;
+                        });
+                        
                         kiezDAO.child (zip).push ({name : name, description : description, vote : 0, imgPath : imgPath}); 
                         
                         window.location = "http://www.4kiez.de/projects.html?zip=" + zip;
