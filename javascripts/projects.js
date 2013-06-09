@@ -6,20 +6,7 @@ $(document).ready (function () {
     console.log ("running the projecth script");
     
     var zipCode = getQueryVariable("zip");
-    
-    $("#uploadImage").click (function () {
-        console.log ("uploadImage");
-        filepicker.setKey('ApwLQtdpTM6omKwCw8DyQz');
-                
-        filepicker.pickAndStore({mimetype:"image/*"},
-             {location:"S3"}, function(fpfiles){
-                 console.log (imgPath);
-                  imgPath = fpfiles[0].url;
-        },function (errors) {
-                console.log(errors);
-            
-        });
-     });
+
      
      $("#createNewItem").click(function () {
         var zip = $("#inputZIP").val ();
@@ -39,12 +26,14 @@ $(document).ready (function () {
     
         var fireurl = 'https://4kiez.firebaseio.com/zips/' + zipCode;
 
+        console.log(fireurl);
         kiezDAO = new Firebase(fireurl);
+        console.log(kiezDAO);
 
-        kiezDAO.on ('child_added',function (snapshot) {
+        kiezDAO.on('child_added',function (snapshot) {
             var msgData = snapshot.val();
             $("#project_tagline").html ("There are "+ projectCount + " projects for " + zipCode);
-
+            console.log(msgData);
             $("#project_list").append (renderProjects(msgData));
         });
     }
@@ -52,6 +41,21 @@ $(document).ready (function () {
     
     
 });
+
+
+//$("#uploadImage").click (function () {
+//    console.log ("uploadImage");
+//    filepicker.setKey('ApwLQtdpTM6omKwCw8DyQz');
+//
+//    filepicker.pickAndStore({mimetype:"image/*"},
+//        {location:"S3"}, function(fpfiles){
+//            console.log (imgPath);
+//            imgPath = fpfiles[0].url;
+//        },function (errors) {
+//            console.log(errors);
+//
+//        });
+//});
 
 function getQueryVariable(variable) {
     var query = window.location.search.substring(1);
@@ -65,9 +69,6 @@ function getQueryVariable(variable) {
     console.log('Query variable %s not found', variable);
 }
 
-function addItem (zip,name,description,votes) {
-
-}
 
 function renderProjects(data) {
     var image = data.imgPath ? data.imgPath : "http://placehold.it/120x120";
