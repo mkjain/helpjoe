@@ -5,17 +5,24 @@ $(document).ready (function () {
     
     zipCode = getQueryVariable("zip");
     
-    $("#project_tagline").html ("Projects for " + zipCode);
+    if (zipCode == null) {
+        location.href = "index.html";
+    }
+    else {
+        $("#project_tagline").html ("Projects for " + zipCode);
     
-    fireurl = 'https://4kiez.firebaseio.com/zips/' + zipCode;
+        fireurl = 'https://4kiez.firebaseio.com/zips/' + zipCode;
+
+        kiezDAO = new Firebase(fireurl);
+
+        kiezDAO.on ('child_added',function (snapshot) {
+            var msgData = snapshot.val();
+
+            $("#project_list").append (renderProjects(msgData));
+        });
+    }
     
-    kiezDAO = new Firebase(fireurl);
     
-    kiezDAO.on ('child_added',function (snapshot) {
-        var msgData = snapshot.val();
-        
-        $("#project_list").append (renderProjects(msgData));
-    });
     
 });
 

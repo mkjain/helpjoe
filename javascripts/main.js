@@ -8,7 +8,7 @@ $(document).ready (function () {
     
     $("#GoAction").click (function () {
             console.log ("Changing location");
-            window.location.href = "http://www.4kiez.de/projects.html?zip=" + $("#inputZIP").val ();    
+            window.location.href = "projects.html?zip=" + $("#inputZIP").val ();    
      });
     
     fireurl =  'https://4kiez.firebaseio.com';
