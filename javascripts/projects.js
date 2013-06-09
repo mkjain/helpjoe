@@ -84,9 +84,7 @@ $(document).ready (function () {
         });
 
         kiezDAO.on('child_added',function (snapshot, prevSnapShot) {
-            var msgData = snapshot.val();
-            $("#vote-text").html ("There are "+ projectCount + " projects for " + zipCode);
-            $("#project_list").append (renderProjects(snapshot));
+            
         });
     }
 });
