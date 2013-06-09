@@ -32,32 +32,31 @@ function getQueryVariable(variable) {
 }
 
 function addItem (zip,name,description,votes) {
-    
+
 }
 
 function renderProjects(data) {
-    var code = '<div class="row">
-    <div class="accordion" id="accordion2">
-    <div class="accordion-group">
-    <div class="accordion-heading">
-    <div class="container">
-
-    <div class="row accordion-toggle">
-    <div class="span2">
-    <img src="http://placehold.it/120x120" class="img-circle">
+    var code = '<div class=\\"row\">
+    <div class=\"accordion\" id=\"accordion2\">
+    <div class=\"accordion-group\">
+    <div class=\"accordion-heading\">
+    <div class=\"container\">
+    <div class=\"row accordion-toggle\">
+    <div class=\"span2\">
+    <img src=\"http://placehold.it/120x120\" class=\"img-circle\">
     </div>
-    <div class="span9">
+    <div class=\"span9\">
     <h2>'+data.name+'</h2>
     <p>'+data.description+'</p>
-    <a class="label pull-right" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+    <a class=\"label pull-right\" data-toggle=\"collapse\" data-parent=\"#accordion2\" href=\"#collapseOne\">
     . . .
     </a>
     </div>
     </div>
     </div>
     </div>
-    <div id="collapseOne" class="accordion-body collapse in">
-    <div class="accordion-inner">'+
+    <div id=\"collapseOne\" class=\"accordion-body collapse in\">
+    <div class=\"accordion-inner\">'+
     data.description+'
     </div>
     </div>
