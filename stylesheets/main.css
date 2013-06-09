@@ -8,6 +8,12 @@
      background-image: url(../images/bg.png);
  }
 
+ #top-container{
+     background-color: #fdfdfd;
+     padding: 2%;
+     border-color: black;
+ }
+
  .accordion-heading{
      background: #f9f9f9;
      color: #282828;
@@ -33,4 +39,8 @@
 
  .modal-body{
      max-height: 800px;
+ }
+
+ #header-img{
+     background-image: url(../images/berlin.png);
  }

@@ -81,7 +81,7 @@ $(document).ready (function () {
                 $("#project_tagline").html ("There are no projects for " + zipCode);
                 $("#vote-text").html("It seems there are no projects in your Zip - why don't you create the first one?")
             }
-        }); 
+        });
 
         kiezDAO.on('child_added',function (snapshot, prevSnapShot) {
             var msgData = snapshot.val();
@@ -118,7 +118,7 @@ function renderProjects(data) {
     }
     $("#spinner").remove();
     var code;
-    code = '<div class=\'row\'><div class=\'span12\'><div class=\'accordion\' id=\'accordion' + projectCount + "\'><div class=\'accordion-group shadow\'><div class=\'accordion-heading\'><div class=\'container\'><div class=\'row accordion-toggle\'><div class=\'span2\'><img src=\'" + image + "\' class=\'img-polaroid\' style=\'width:120px;height:120px;\'></div><div class=\'span9\'><h2>" + data.name.toTitleCase() + "</h2><p>" + smallDesc + "</p><br><a class=\'btn pull-right pagination-centered\' data-toggle=\'collapse\' data-parent=\'#accordion" + projectCount + "\' href=\'#collapse" + projectCount + "\'> Read More</a></div></div></div></div><div id=\'collapse" + projectCount + "\' class=\'accordion-body collapse\'><div class=\'accordion-inner\'>" + accordionInner + "</div></div></div></div>";
+    code = '<div class=\'row\'><div class=\'span12\'><div class=\'accordion\' id=\'accordion' + projectCount + "\'><div class=\'accordion-group \'><div class=\'accordion-heading\'><div class=\'container\'><div class=\'row accordion-toggle\'><div class=\'span2\'><img src=\'" + image + "\' class=\'img-polaroid\' style=\'width:120px;height:120px;\'></div><div class=\'span9\'><h2>" + data.name.toTitleCase() + "</h2><p>" + smallDesc + "</p><br><a class=\'btn pull-right pagination-centered\' data-toggle=\'collapse\' data-parent=\'#accordion" + projectCount + "\' href=\'#collapse" + projectCount + "\'> Read More</a></div></div></div></div><div id=\'collapse" + projectCount + "\' class=\'accordion-body collapse\'><div class=\'accordion-inner\'>" + accordionInner + "</div></div></div></div>";
 
     
 

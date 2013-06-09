@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7658693-2a7e-49c6-a445-724a01aeb7ae" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/bg_hr.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/blacktocat.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/sprite_download.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stylesheets/main.css" afterPath="$PROJECT_DIR$/stylesheets/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projects.html" afterPath="$PROJECT_DIR$/projects.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javascripts/projects.js" afterPath="$PROJECT_DIR$/javascripts/projects.js" />
@@ -11,10 +14,10 @@
     <file path="/Dummy.txt" changelist="f7658693-2a7e-49c6-a445-724a01aeb7ae" time="1370741806350" ignored="false" />
     <file path="/project.js" changelist="f7658693-2a7e-49c6-a445-724a01aeb7ae" time="1370758870761" ignored="false" />
     <file path="/projects.js" changelist="f7658693-2a7e-49c6-a445-724a01aeb7ae" time="1370765489827" ignored="false" />
-    <file path="/projects.html" changelist="f7658693-2a7e-49c6-a445-724a01aeb7ae" time="1370763893122" ignored="false" />
+    <file path="/projects.html" changelist="f7658693-2a7e-49c6-a445-724a01aeb7ae" time="1370767074629" ignored="false" />
     <file path="/new.html" changelist="f7658693-2a7e-49c6-a445-724a01aeb7ae" time="1370748377780" ignored="false" />
     <file path="/index.html" changelist="f7658693-2a7e-49c6-a445-724a01aeb7ae" time="1370749403509" ignored="false" />
-    <file path="/main.css" changelist="f7658693-2a7e-49c6-a445-724a01aeb7ae" time="1370763511222" ignored="false" />
+    <file path="/main.css" changelist="f7658693-2a7e-49c6-a445-724a01aeb7ae" time="1370767099285" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,12 +34,12 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="projects.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="projects.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/javascripts/projects.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="83" column="12" selection-start="2927" selection-end="2927" vertical-scroll-proportion="0.6584939">
+            <state line="120" column="144" selection-start="4802" selection-end="4802" vertical-scroll-proportion="-11.613636">
               <folding>
-                <marker date="1370765713000" expanded="true" signature="3873:3883" placeholder="..." />
+                <marker date="1370766379000" expanded="true" signature="3872:3882" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -45,16 +48,16 @@
       <file leaf-file-name="projects.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/projects.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="87" column="59" selection-start="3860" selection-end="3860" vertical-scroll-proportion="2.2">
+            <state line="22" column="49" selection-start="892" selection-end="892" vertical-scroll-proportion="-3.3">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/stylesheets/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="18" selection-start="476" selection-end="476" vertical-scroll-proportion="-9.272727">
+            <state line="45" column="0" selection-start="647" selection-end="647" vertical-scroll-proportion="0.8429319">
               <folding />
             </state>
           </provider>
@@ -111,9 +114,9 @@
         <option value="$PROJECT_DIR$/javascripts/project.js" />
         <option value="$PROJECT_DIR$/new.html" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/stylesheets/main.css" />
-        <option value="$PROJECT_DIR$/projects.html" />
         <option value="$PROJECT_DIR$/javascripts/projects.js" />
+        <option value="$PROJECT_DIR$/projects.html" />
+        <option value="$PROJECT_DIR$/stylesheets/main.css" />
       </list>
     </option>
   </component>
@@ -309,7 +312,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="45" column="632" selection-start="1710" selection-end="1710" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1370765713000" expanded="true" signature="3873:3883" placeholder="..." />
+            <marker date="1370766379000" expanded="true" signature="3872:3882" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -366,26 +369,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stylesheets/main.css">
+    <entry file="file://$PROJECT_DIR$/javascripts/projects.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="18" selection-start="476" selection-end="476" vertical-scroll-proportion="-9.272727">
-          <folding />
+        <state line="120" column="144" selection-start="4802" selection-end="4802" vertical-scroll-proportion="-11.613636">
+          <folding>
+            <marker date="1370766379000" expanded="true" signature="3872:3882" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/projects.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="59" selection-start="3860" selection-end="3860" vertical-scroll-proportion="2.2">
+        <state line="22" column="49" selection-start="892" selection-end="892" vertical-scroll-proportion="-3.3">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascripts/projects.js">
+    <entry file="file://$PROJECT_DIR$/stylesheets/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="12" selection-start="2927" selection-end="2927" vertical-scroll-proportion="0.6584939">
-          <folding>
-            <marker date="1370765713000" expanded="true" signature="3873:3883" placeholder="..." />
-          </folding>
+        <state line="45" column="0" selection-start="647" selection-end="647" vertical-scroll-proportion="0.8429319">
+          <folding />
         </state>
       </provider>
     </entry>
