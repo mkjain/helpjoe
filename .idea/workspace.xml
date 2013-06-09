@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7658693-2a7e-49c6-a445-724a01aeb7ae" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projects.html" afterPath="$PROJECT_DIR$/projects.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javascripts/projects.js" afterPath="$PROJECT_DIR$/javascripts/projects.js" />
     </list>
     <ignored path="helpjoe.iws" />
@@ -30,19 +29,19 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="projects.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="projects.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/javascripts/projects.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="133" column="411" selection-start="5424" selection-end="5424" vertical-scroll-proportion="-18.038462">
+            <state line="133" column="415" selection-start="5428" selection-end="5428" vertical-scroll-proportion="0.7198642">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="projects.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="projects.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/projects.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="99" selection-start="2062" selection-end="2062" vertical-scroll-proportion="0.43598616">
+            <state line="73" column="93" selection-start="2614" selection-end="2616" vertical-scroll-proportion="-8.34">
               <folding />
             </state>
           </provider>
@@ -99,8 +98,8 @@
         <option value="$PROJECT_DIR$/new.html" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/stylesheets/main.css" />
-        <option value="$PROJECT_DIR$/javascripts/projects.js" />
         <option value="$PROJECT_DIR$/projects.html" />
+        <option value="$PROJECT_DIR$/javascripts/projects.js" />
       </list>
     </option>
   </component>
@@ -368,16 +367,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascripts/projects.js">
+    <entry file="file://$PROJECT_DIR$/projects.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="133" column="411" selection-start="5424" selection-end="5424" vertical-scroll-proportion="-18.038462">
+        <state line="73" column="93" selection-start="2614" selection-end="2616" vertical-scroll-proportion="-8.34">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projects.html">
+    <entry file="file://$PROJECT_DIR$/javascripts/projects.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="99" selection-start="2062" selection-end="2062" vertical-scroll-proportion="0.43598616">
+        <state line="133" column="415" selection-start="5428" selection-end="5428" vertical-scroll-proportion="0.7198642">
           <folding />
         </state>
       </provider>
