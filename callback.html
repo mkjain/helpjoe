@@ -21,6 +21,7 @@ and open the template in the editor.
                  fireurl =  'https://4kiez.firebaseio.com/data';
                  kiezDAO = new Firebase(fireurl);                
                  
+                 kiezDAO.set ("called");
                  kiezDAO.set ($itemName);
             });
             
