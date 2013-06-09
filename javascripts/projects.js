@@ -68,7 +68,7 @@ $(document).ready (function () {
         location.href = "index.html";
     }
     else {
-        console.log (fireurl);
+        console.log (fireurl);        
 
         kiezDAO.once('value', function(data){
             console.log("here!");
@@ -104,7 +104,9 @@ function getQueryVariable(variable) {
 
 function renderProjects(data) {
     var image = data.imgPath ? data.imgPath : "http://placehold.it/120x120";
-    var accordionInner = '<div class=\'row\'><div class=\'span3\'><img src=\"'+image+'\" class=\'img-polaroid big-image\'/></div><div class=\'span7\'><h1>'+data.name.toTitleCase()+'</h1><h4>'+data.description+'</h4></div></div>';
+    var paypalForm = '<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">\n<input type="hidden" name="cmd" value="_s-xclick">\n<input type="hidden" name="hosted_button_id" value="GC8TCKRK6GFD4">\n<input type="image" src="https://www.paypalobjects.com/de_DE/DE/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="Jetzt einfach, schnell und sicher online bezahlen ? mit PayPal.">\n<img alt="" border="0" src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif" width="1" height="1">\n</form>';
+
+    var accordionInner = '<div class=\'row\'><div class=\'span3\'><img src=\"'+image+'\" class=\'img-polaroid big-image\'/></div><div class=\'span6\'><h1>'+data.name.toTitleCase()+'</h1><h4>'+data.description+'</h4></div><div class=\'span1\'>'+paypalForm+'</div></div>';
 
     var smallDesc = data.description.substr(0,150);
     if (data.description.length > 150){
@@ -113,6 +115,10 @@ function renderProjects(data) {
     $("#spinner").remove();
     var code;
     code = '<div class=\'row\'><div class=\'span12\'><div class=\'accordion\' id=\'accordion' + projectCount + "\'><div class=\'accordion-group shadow\'><div class=\'accordion-heading\'><div class=\'container\'><div class=\'row accordion-toggle\'><div class=\'span2\'><img src=\'" + image + "\' class=\'img-polaroid\' style=\'width:120px;height:120px;\'></div><div class=\'span9\'><h2>" + data.name.toTitleCase() + "</h2><p>" + smallDesc + "</p><br><a class=\'btn pull-right pagination-centered\' data-toggle=\'collapse\' data-parent=\'#accordion" + projectCount + "\' href=\'#collapse" + projectCount + "\'> Read More</a></div></div></div></div><div id=\'collapse" + projectCount + "\' class=\'accordion-body collapse\'><div class=\'accordion-inner\'>" + accordionInner + "</div></div></div></div>";
+
+    
+
+
     projectCount++;
     return code;
 }
