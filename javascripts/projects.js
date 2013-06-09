@@ -1,5 +1,6 @@
 var kiezDAO;
 var projectCount=1;
+var imgPath;
 
 $(document).ready (function () {
     console.log ("running the projecth script");
