@@ -42,5 +42,12 @@
  }
 
  #header-img{
+
      background: url(../images/berlin.png) no-repeat bottom right;
+     background-size: 30%;
+     -o-background-size: 30%;
+ }
+
+ #add-button{
+     color: white;
  }
