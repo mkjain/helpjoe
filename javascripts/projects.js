@@ -107,7 +107,7 @@ function getQueryVariable(variable) {
 function renderProjects(data) {
     var image = data.imgPath ? data.imgPath : "http://placehold.it/120x120";
     var fundingProgress = '<div class="progress progress-success progress-striped progress-thick"><div class="bar" style="width: 80%"></div></div>';
-    var paypalForm = '<script src="javascripts/paypal-button.min.js?merchant=farhadarb@gmail.com" data-button="donate" data-name="4kiez" data-quantity="1" data-amount="1" data-currency="EUR" data-shipping="0" data-tax="0" data-callback="http://www.4kiez.de/callback.js" data-env="sandbox"></script>';
+    var paypalForm = '<script src="javascripts/paypal-button.min.js?merchant=farhadarb@gmail.com" data-button="donate" data-name="4kiez" data-quantity-editable="1" data-amount="1" data-currency="EUR" data-shipping="0" data-tax="0" data-callback="http://www.4kiez.de/callback.js" data-env="sandbox"></script>';
 
     var accordionInner = '<div class=\'row\'><div class=\'span3\'><img src=\"'+image+'\" class=\'img-polaroid big-image\'/></div><div class=\'span6\'><h1>'+data.name.toTitleCase()+'</h1><h4>'+data.description+'</h4></div><div class=\'span1\'>'+ fundingProgress + paypalForm+'</div></div>';
 
