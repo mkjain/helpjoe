@@ -30,3 +30,7 @@
  .progress-thick{
      height: 20px;
  }
+
+ .modal-body{
+     max-height: 800px;
+ }

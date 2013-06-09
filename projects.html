@@ -58,14 +58,14 @@
           <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
               <h3 id="myModalLabel">Create a new project</h3>
-              <p>Add a project that will help your local community - if enough people vote for it - we'll try and realize it!</p>
+              <p>Add a project that will help your local community and get people to vote for it!</p>
           </div>
           <div class="modal-body">
                       <form class="form-horizontal" id="formNewItem">
                           <div class="control-group">
                               <label class="control-label">ZIP:</label>
                               <div class="controls">
-                                  <input type="text" data-provide="typeahead" placeholder="Which zip code is the project in?" class="input-xlarge" id="inputZIP">
+                                  <input type="text" data-provide="typeahead" placeholder="Where is the project based?" cols="6" class="input-xlarge" id="inputZIP">
                               </div>
                           </div>
                           <div class="control-group">
@@ -77,13 +77,23 @@
                           <div class="control-group">
                               <label class="control-label">Description</label>
                               <div class="controls">
-                                  <textarea rows="8" cols="50" id="inputDescription" placeholder="Describe the project & try to convince others to fund it too.."></textarea>
+                                  <textarea rows="8" cols="80" class="input-xlarge" id="inputDescription" placeholder="Describe the project & try to convince others to fund it too.."></textarea>
+                              </div>
+                          </div>
+                          <div class="control-group">
+                              <label class="control-label">Description</label>
+
+                              <div class="controls">
+                                  <div class="input-append">
+                                      <input class="span3" type="text" data-provide="typeahead" placeholder="Enter funding/voting goal. 1 Vote = 1 €"  id="fundingGoal">
+                                      <span class="add-on">€</span>
+                                  </div>
                               </div>
                           </div>
                           <div class="control-group">
                               <label class="control-label">Image Upload</label>
                               <div class="controls">
-                                  <a class="btn btn-success" id="uploadImage">Upload Image</a>
+                                  <a class="btn btn-info" id="uploadImage">Upload Image</a>
                               </div>
                           </div>
                           <div class="control-group">
