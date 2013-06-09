@@ -119,7 +119,16 @@ function renderProjects(snapshot) {
     }
     $("#spinner").remove();
     var code;
-    code = '<div class=\'row\'><div class=\'span12\'><div class=\'accordion\' id=\'accordion' + projectCount + "\'><div class=\'accordion-group \'><div class=\'accordion-heading\'><div class=\'container\'><div class=\'row accordion-toggle\'><div class=\'span2\'><img src=\'" + image + "\' class=\'img-polaroid\' style=\'width:120px;height:120px;\'></div><div class=\'span9\'><h2>" + data.name.toTitleCase() + "</h2><p><span class=\'badge badge-info\'>Funding Goal: " + parseInt(data.goal) + "?</span>" + smallDesc + "</p><br><a class=\'btn pull-right pagination-centered\' data-toggle=\'collapse\' data-parent=\'#accordion" + projectCount + "\' href=\'#collapse" + projectCount + "\'> Read More</a></div></div></div></div><div id=\'collapse" + projectCount + "\' class=\'accordion-body collapse\'><div class=\'accordion-inner\'>" + accordionInner + "</div></div></div></div>";
+    var status = "";
+    
+    if (data.funded == data.goal) {
+        status = "<span class=\'badge badge-success'>Fully funded: " + parseInt(data.funded) + " EUR !</span><br/>";
+    }
+    else {
+        status = "<span class=\'badge badge-warning\'>Already funded: " + parseInt(data.funded) + " EUR</span><br/>";
+    }
+    
+    code = '<div class=\'row\'><div class=\'span12\'><div class=\'accordion\' id=\'accordion' + projectCount + "\'><div class=\'accordion-group \'><div class=\'accordion-heading\'><div class=\'container\'><div class=\'row accordion-toggle\'><div class=\'span2\'><img src=\'" + image + "\' class=\'img-polaroid\' style=\'width:120px;height:120px;\'></div><div class=\'span9\'><h2>" + data.name.toTitleCase() + "</h2><p><span class=\'badge badge-info\'>Funding Goal: " + parseInt(data.goal) + " EUR</span><br>" + status + smallDesc + "</p><br><a class=\'btn pull-right pagination-centered\' data-toggle=\'collapse\' data-parent=\'#accordion" + projectCount + "\' href=\'#collapse" + projectCount + "\'> Read More</a></div></div></div></div><div id=\'collapse" + projectCount + "\' class=\'accordion-body collapse\'><div class=\'accordion-inner\'>" + accordionInner + "</div></div></div></div>";
 
     projectCount++;
     return code;
