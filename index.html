@@ -5,13 +5,12 @@
     <meta charset='utf-8' />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
     <meta name="description" content="4Kiez - Reclaim your neighbourhood!" />
-
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
     <script type='text/javascript' src='https://cdn.firebase.com/v0/firebase.js'></script>
+    <script type='text/javascript' src='https://cdn.firebase.com/v0/firebase-auth-client.js'></script>
     <title>4Kiez</title>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-    <script src="javascripts/chosen.jquery.min.js"></script>
-    <script src="https://github.com/allmarkedup/purl/blob/master/purl.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" type="text/javascript"></script>
+    <script src="javascripts/chosen.jquery.min.js" type="text/javascript"></script>
 
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <script src="javascripts/main.js"></script>
@@ -19,60 +18,75 @@
     <link href="stylesheets/chosen.css" rel="stylesheet">
   </head>
 
-  <body>
-      
+  <body>      
       <div class="container-fluid">
             <!-- HEADER -->
-            <div class="row-fluid">
-                <header class="inner">
+            <div class="row-fluid" style="background-color: #212121;">
+                <div class="span3"></div>
+                <div class="span6 inner">
                   <h1 id="project_title">4Kiez</h1>
-                  <h2 id="project_tagline">Reclaim your neighbourhood.</h2>
-                </header>
+                  <h2 id="project_tagline">Reclaim your neighbourhood.</h2> 
+                  <li class="dropdown pull-right">
+                        <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign Up <strong class="caret"></strong></a>
+                        <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
+                                <form accept-charset="UTF-8">
+                                        <input style="margin-bottom: 15px;" type="text" placeholder="Username" id="createUsername" name="username"><br/>
+                                        <input style="margin-bottom: 15px;" type="password" placeholder="Password" id="createPassword">
+                                        <input style="margin-bottom: 15px;" type="password" placeholder="Repeat Password" id="createRepeatPassword">
+                                        <input class="btn btn-primary btn-block" type="button" value="Sign Up" id="CreateAccount">
+                                </form>
+                        </div>
+                </li>
+                  <li class="dropdown pull-right">
+                        <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
+                        <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
+                                <form accept-charset="UTF-8">
+                                        <input style="margin-bottom: 15px;" type="text" placeholder="Username" id="loginUsername" name="username"><br/>
+                                        <input style="margin-bottom: 15px;" type="password" placeholder="Password" id="loginPassword" name="password">
+                                        <input style="float: left; margin-right: 10px;" type="checkbox" name="remember-me" id="loginRemember-me" value="1">
+                                        <label class="string optional" for="user_remember_me"> Remember me</label>
+                                        <input class="btn btn-primary btn-block" type="button" value="Sign In" id="SignIn">
+                                </form>
+                        </div>
+                </li>
+                </div>
+                <div class="span3"></div>
             </div>
-
-            <!-- MAIN CONTENT -->
-            <div id="main_content_wrap" class="outer">
-                <div class="row-fluid">
+                <div class="row-fluid" id="main_content_wrap">
                     <div class="span3"></div>
-                    <div class="span6">
-                        <br/>
-                         <form class="form-horizontal loginform">
-                             <div class="control-group">
-                                 <div class="controls">
-                                     <br/><br/>
-                                 </div> 
-                             </div>
-                            <div class="control-group">
-                                <label class="control-label" for="inputEmail">Your ZIP Code</label>
-                                <div class="controls">
-                                    <select id="inputZIP">
-                                        <option>10963</option>
-                                    </select>
-
-                                    <button class="btn btn-primary">Go</button>
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                 <div class="controls">
-                                     <br/><br/><br/>
-                                 </div> 
-                            </div>
-                        </form>
+                    <div class="span3">
+                        <h2>Create A Cause</h2>
+                        If you want to create a cause just click below
+                        <a href="new.html" class="btn btn-inverse">Create a new Cause</a>
+                    </div>
+                    <div class="span3">
+                        <h2>Support a Cause</h2>
                     </div>
                     <div class="span3"></div>
                 </div>
+                <div class="row-fluid" id="main_content_wrap">
+                    <div class="span3"></div>
+                    <div class="span6">
+                         <form class="form-horizontal loginform">
+                            <div class="control-group">
+                                <div class="controls">
+                                    <input type="text" data-provide="typeahead" placeholder="type in your zipcode..." class="input-xlarge" id="inputZIP">
 
-            </div>
-
-            <!-- FOOTER  -->
-            <div id="footer_wrap" class="outer">
-              <footer class="inner">
-                <p class="copyright">4Kiez maintained by <a href="https://github.com/mkjain">mkjain</a> made with lots of coffein</p>
-              </footer>
-            </div>
-
-          
-          
+                                    <a class="btn btn-success btn-large" id="GoAction">Go</a>
+                                </div>
+                            </div>
+                        </form>
+                        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                    </div>
+                    <div class="span3"></div>
+                </div>
+            <div class="row-fluid" style="background-color: #212121;">
+                <div class="span3"></div>
+                <div class="span6 inner">
+                    <p class="copyright">4Kiez maintained by <a href="https://github.com/mkjain">mkjain</a> made with lots of coffein</p>
+                </div>
+                <div class="span3"></div>
+            </div>                
       </div>
 
   
