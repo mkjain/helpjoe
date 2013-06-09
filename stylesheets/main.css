@@ -42,5 +42,5 @@
  }
 
  #header-img{
-     background-image: url(../images/berlin.png);
+     background: url(../images/berlin.png) no-repeat bottom right;
  }
