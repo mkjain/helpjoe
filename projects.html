@@ -12,115 +12,127 @@
 </head>
 
 <body>
-<div class="container shadow" id="top-container">
-    <!-- HEADER -->
-    <div class="row">
-        <div class="span12 pull-left" id="header-img">
-            <h1 id="project_title">4Kiez</h1>
+<div class="page-wrap">
 
-            <h3 id="project_tagline">Reclaim your neighbourhood!</h3>
+    <div class="container shadow" id="top-container">
+        <!-- HEADER -->
+        <div class="row">
+            <div class="span12 pull-left" id="header-img">
+                <h1 id="project_title">4Kiez</h1>
 
-        </div>
-
-    </div>
-    <hr/>
-    <div class="row">
-
-        <div class="span9">
-            <h2 id="vote-text">Loading Projects...</h2>
-        </div>
-        <div class="span3">
-            <a href="#myModal" role="button" data-toggle="modal">
-                <div class="well btn-success pagination-centered shadow" href="#">
-                    <h3 id="add-button">  &plus; Add A Project</h3>
-                </div>
-            </a>
-        </div>
-    </div>
-    <div class="container" id="project_list">
-        <div id="spinner" class="row">
-            <div class="span5">
-
-            </div>
-            <div class="span2">
-                <img src="images/spinner.gif" alt="spinner"/>
-            </div>
-            <div class="span5">
+                <h3 id="project_tagline">Reclaim your neighbourhood!</h3>
 
             </div>
 
         </div>
+        <hr/>
+        <div class="row">
 
-        <!-- this is where the project list goes -->
-    </div>
-
-    <!--modal for new projects-->
-    <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-         aria-hidden="true">
-        <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h3 id="myModalLabel">Create a new project</h3>
-
-            <p>Add a project that will help your local community and get people to vote for it!</p>
+            <div class="span9">
+                <h2 id="vote-text">Loading Projects...</h2>
+            </div>
+            <div class="span3">
+                <a href="#myModal" role="button" data-toggle="modal">
+                    <div class="well btn-success pagination-centered shadow" href="#">
+                        <h3 id="add-button">  &plus; Add A Project</h3>
+                    </div>
+                </a>
+            </div>
         </div>
-        <div class="modal-body">
-            <form class="form-horizontal" id="formNewItem">
-                <div class="control-group">
-                    <label class="control-label">ZIP:</label>
+        <div class="container" id="project_list">
+            <div id="spinner" class="row">
+                <div class="span5">
 
-                    <div class="controls">
-                        <input type="text" data-provide="typeahead" placeholder="Where is the project based?" cols="6"
-                               class="input-xlarge" id="inputZIP">
-                    </div>
                 </div>
-                <div class="control-group">
-                    <label class="control-label">Name</label>
-
-                    <div class="controls">
-                        <input type="text" data-provide="typeahead" placeholder="Give the project a title"
-                               class="input-xlarge" id="inputName">
-                    </div>
+                <div class="span2">
+                    <img src="images/spinner.gif" alt="spinner"/>
                 </div>
-                <div class="control-group">
-                    <label class="control-label">Description</label>
+                <div class="span5">
 
-                    <div class="controls">
-                        <textarea rows="8" cols="80" class="input-xlarge" id="inputDescription"
-                                  placeholder="Describe the project & try to convince others to fund it too.."></textarea>
-                    </div>
                 </div>
-                <div class="control-group">
-                    <label class="control-label">Description</label>
 
-                    <div class="controls">
-                        <div class="input-append">
-                            <input class="span3" type="text" data-provide="typeahead"
-                                   placeholder="Enter funding/voting goal. 1 Vote = 1 €" id="fundingGoal">
-                            <span class="add-on">€</span>
+            </div>
+
+            <!-- this is where the project list goes -->
+        </div>
+
+        <!--modal for new projects-->
+        <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+             aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">?</button>
+                <h3 id="myModalLabel">Create a new project</h3>
+
+                <p>Add a project that will help your local community and get people to vote for it!</p>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" id="formNewItem">
+                    <div class="control-group">
+                        <label class="control-label">ZIP:</label>
+
+                        <div class="controls">
+                            <input type="text" data-provide="typeahead" placeholder="Where is the project based?"
+                                   cols="6"
+                                   class="input-xlarge" id="inputZIP">
                         </div>
                     </div>
-                </div>
-                <div class="control-group">
-                    <label class="control-label">Image Upload</label>
+                    <div class="control-group">
+                        <label class="control-label">Name</label>
 
-                    <div class="controls">
-                        <a class="btn btn-info" id="uploadImage">Upload Image</a>
+                        <div class="controls">
+                            <input type="text" data-provide="typeahead" placeholder="Give the project a title"
+                                   class="input-xlarge" id="inputName">
+                        </div>
                     </div>
-                </div>
-                <div class="control-group">
-                    <label class="control-label"></label>
+                    <div class="control-group">
+                        <label class="control-label">Description</label>
 
-                    <div class="controls">
-                        <a href="#" class="btn btn-success" id="createNewItem">Submit</a>
+                        <div class="controls">
+                            <textarea rows="8" cols="80" class="input-xlarge" id="inputDescription"
+                                      placeholder="Describe the project & try to convince others to fund it too.."></textarea>
+                        </div>
                     </div>
-                </div>
-            </form>
+                    <div class="control-group">
+                        <label class="control-label">Description</label>
+
+                        <div class="controls">
+                            <div class="input-append">
+                                <input class="span3" type="text" data-provide="typeahead"
+                                       placeholder="Enter funding/voting goal. 1 Vote = 1 €" id="fundingGoal">
+                                <span class="add-on">€</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">Image Upload</label>
+
+                        <div class="controls">
+                            <a class="btn btn-info" id="uploadImage">Upload Image</a>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label"></label>
+
+                        <div class="controls">
+                            <a href="#" class="btn btn-success" id="createNewItem">Submit</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
-</div>
-<!--modal for new projects-->
+    <!--modal for new projects-->
 
 </div>
+<footer class="site-footer">
+    <div class="container shadow" id="footer-container">
+        <div class="row">
+            <div class="span12 pull-right pagination-right">
+                Built with <i class="icon-heart"></i> in Berlin.
+            </div>
+        </div>
+    </div>
+</footer>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 <script type="text/javascript" src="http://api.filepicker.io/v1/filepicker.js"></script>
 
