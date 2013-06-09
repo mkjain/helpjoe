@@ -53,6 +53,7 @@ $(document).ready (function () {
         var name = $("#inputName").val ();
         var description = $("#inputDescription").val ();
         var goal = $("#fundingGoal").val();
+         console.log(goal);
         var funded = 1/goal * 100;
         var backers = 1;
         var addfireurl = 'https://4kiez.firebaseio.com/zips/';
@@ -80,7 +81,7 @@ $(document).ready (function () {
                 $("#project_tagline").html ("There are no projects for " + zipCode);
                 $("#vote-text").html("It seems there are no projects in your Zip - why don't you create the first one?")
             }
-        });
+        }); 
 
         kiezDAO.on('child_added',function (snapshot, prevSnapShot) {
             var msgData = snapshot.val();
