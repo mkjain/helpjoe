@@ -12,8 +12,12 @@ $(document).ready (function () {
         filepicker.setKey('ApwLQtdpTM6omKwCw8DyQz');
                 
         filepicker.pickAndStore({mimetype:"image/*"},
-             {location:"S3"}, function(fpfiles){                            
-                  imgPath = fpfiles.url;
+             {location:"S3"}, function(fpfiles){
+                 console.log (imgPath);
+                  imgPath = fpfiles[0].url;
+        },function (errors) {
+                console.log(errors);
+            
         });
      });
      
