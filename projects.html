@@ -8,34 +8,46 @@
   <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
   <title>4Kiez</title>
   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-  <link href="stylesheets/main.css" rel="stylesheet">    
+  <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+  <link href="stylesheets/main.css" rel="stylesheet">
   <link href="stylesheets/chosen.css" rel="stylesheet">
 </head>
 
 <body>
-  <div class="container-fluid">
+  <div class="container">
     <!-- HEADER -->
     <div class="row" style="background-color: #212121;">
-      <div class="span3"></div>
-      <div class="span6 inner">
+      <div class="span12">
+          <br>
         <h1 id="project_title">4Kiez</h1>
-        <h2 id="project_tagline"></h2>  
-      </div>
-      <div class="span3"></div>
+        <h2 id="project_tagline">Reclaim your neighbourhood! Loading projects...</h2>
+         </div>
     </div>
-    <div class="row">
-      <div class="span2">
-        <div class="well">
-          <h1 class="pagination-centered" style="font-size:60px;">+</h1>
+     <div class="row">
+         <div class="span9">
+             <h2>Vote For Your Favorite Projects:</h2>
+         </div>
+         <div class="span3">
+             <div class="well btn-success pagination-centered" href="#">
+                 <i class="icon-plus-sign icon-white"></i> Add A Project
+             </div>
+         </div>
+      </div>
+    <div class="container" id="project_list">
+        <div id="spinner" class="row">
+            <div class="span5">
+
+            </div>
+            <div class="span2">
+                <img class="img-circle" src="images/spinner.gif" alt="spinner"/>
+            </div>
+            <div class="span5">
+
+            </div>
+
         </div>
 
-      </div>
-      <div class="span9">
-      </div>
-    </div>
-    <div class="container" id="project_list">
       <!-- this is where the project list goes -->
-     
     </div>
 
   </div>
