@@ -1,10 +1,35 @@
 var kiezDAO;
 var projectCount=1;
+var imgPath = "";
 
 $(document).ready (function () {
     console.log ("running the projecth script");
     
     var zipCode = getQueryVariable("zip");
+    
+    $("#uploadImage").click (function () {
+        console.log ("uploadImage");
+        filepicker.setKey('ApwLQtdpTM6omKwCw8DyQz');
+                
+        filepicker.pickAndStore({mimetype:"image/*"},
+             {location:"S3"}, function(fpfiles){
+                 console.log (imgPath);
+                  imgPath = fpfiles[0].url;
+        },function (errors) {
+                console.log(errors);
+            
+        });
+     });
+     
+     $("#createNewItem").click(function () {
+        var zip = $("#inputZIP").val ();
+        var name = $("#inputName").val ();
+        var description = $("#inputDescription").val ();
+        
+        kiezDAO.child (zip).push ({name : name, description : description, vote : 0, imgPath : imgPath}); 
+
+        window.location = "http://www.4kiez.de/projects.html?zip=" + zip;
+    });
     
     if (zipCode == null) {
         location.href = "index.html";
