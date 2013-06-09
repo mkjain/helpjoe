@@ -15,11 +15,13 @@ $(document).ready (function () {
         
         var imgPath = "";
         
-         filepicker.setKey('ApwLQtdpTM6omKwCw8DyQz');
+         
            var input = document.getElementById("upload-file");
+           
             if (!input.value) {
                 console.log("Choose a png to store to S3");
             } else {
+                filepicker.setKey('ApwLQtdpTM6omKwCw8DyQz');
                 filepicker.store(input, function(FPFile){
                         console.log("Store successful");
                         
