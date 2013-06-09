@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7658693-2a7e-49c6-a445-724a01aeb7ae" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascripts/chosen.jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascripts/init.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascripts/new.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/stylesheets/chosen.css" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/javascripts/main.js" afterPath="$PROJECT_DIR$/javascripts/home.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/item.html" afterPath="$PROJECT_DIR$/item.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projects.html" afterPath="$PROJECT_DIR$/projects.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="helpjoe.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,7 +41,7 @@
       <file leaf-file-name="projects.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/projects.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="136" column="0" selection-start="5310" selection-end="5310" vertical-scroll-proportion="0.7715736">
+            <state line="135" column="47" selection-start="5309" selection-end="5309" vertical-scroll-proportion="0.7715736">
               <folding />
             </state>
           </provider>
@@ -376,7 +368,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/projects.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="136" column="0" selection-start="5310" selection-end="5310" vertical-scroll-proportion="0.7715736">
+        <state line="135" column="47" selection-start="5309" selection-end="5309" vertical-scroll-proportion="0.7715736">
           <folding />
         </state>
       </provider>
