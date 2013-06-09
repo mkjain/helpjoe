@@ -10,6 +10,13 @@ $(document).ready (function () {
             console.log ("Changing location");
             window.location.href = "projects.html?zip=" + $("#inputZIP").val ();    
      });
+     
+     $("#inputZIP").keypress(function(event){
+        console.log ("enter");
+        if(event.keyCode == 13){
+            $("#GoAction").click();
+        }
+    });
     
     fireurl =  'https://4kiez.firebaseio.com';
     kiezDAO = new Firebase(fireurl);
