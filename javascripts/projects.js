@@ -107,7 +107,7 @@ function getQueryVariable(variable) {
 function renderProjects(data) {
     var image = data.imgPath ? data.imgPath : "http://placehold.it/120x120";
     var fundingProgress = '<div class="progress progress-success progress-striped progress-thick"><div class="bar" style="width: 80%"></div></div>';
-    var paypalForm = '<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">\n<input type="hidden" name="cmd" value="_s-xclick">\n<input type="hidden" name="hosted_button_id" value="GC8TCKRK6GFD4">\n<input type="image" src="https://www.paypalobjects.com/de_DE/DE/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="Jetzt einfach, schnell und sicher online bezahlen ? mit PayPal.">\n<img alt="" border="0" src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif" width="1" height="1">\n</form>';
+    var paypalForm = '<script src="javascripts/paypal-button.min.js?merchant=farhadarb@gmail.com" data-button="donate" data-name="4kiez" data-quantity="1" data-amount="1" data-currency="EUR" data-shipping="0" data-tax="0" data-callback="http://www.4kiez.de/callback.html" data-env="sandbox"></script>';
 
     var accordionInner = '<div class=\'row\'><div class=\'span3\'><img src=\"'+image+'\" class=\'img-polaroid big-image\'/></div><div class=\'span6\'><h1>'+data.name.toTitleCase()+'</h1><h4>'+data.description+'</h4></div><div class=\'span1\'>'+ fundingProgress + paypalForm+'</div></div>';
 
