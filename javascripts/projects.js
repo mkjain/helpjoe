@@ -62,7 +62,7 @@ $(document).ready (function () {
         
         console.log (imgPath);
         
-        addDAO.child (zip).push ({name : name, description : description, imgPath : imgPath, goal: goal, funded : funded, backers : backers });
+        addDAO.child (zip).push ({name : name, description : description, imgPath : imgPath, goal: parseInt (goal), funded : 0, backers : backers });
 
         window.location = "http://www.4kiez.de/projects.html?zip=" + zip;
     });
@@ -119,10 +119,7 @@ function renderProjects(snapshot) {
     }
     $("#spinner").remove();
     var code;
-    code = '<div class=\'row\'><div class=\'span12\'><div class=\'accordion\' id=\'accordion' + projectCount + "\'><div class=\'accordion-group \'><div class=\'accordion-heading\'><div class=\'container\'><div class=\'row accordion-toggle\'><div class=\'span2\'><img src=\'" + image + "\' class=\'img-polaroid\' style=\'width:120px;height:120px;\'></div><div class=\'span9\'><h2>" + data.name.toTitleCase() + "</h2><p>" + smallDesc + "</p><br><a class=\'btn pull-right pagination-centered\' data-toggle=\'collapse\' data-parent=\'#accordion" + projectCount + "\' href=\'#collapse" + projectCount + "\'> Read More</a></div></div></div></div><div id=\'collapse" + projectCount + "\' class=\'accordion-body collapse\'><div class=\'accordion-inner\'>" + accordionInner + "</div></div></div></div>";
-
-    
-
+    code = '<div class=\'row\'><div class=\'span12\'><div class=\'accordion\' id=\'accordion' + projectCount + "\'><div class=\'accordion-group \'><div class=\'accordion-heading\'><div class=\'container\'><div class=\'row accordion-toggle\'><div class=\'span2\'><img src=\'" + image + "\' class=\'img-polaroid\' style=\'width:120px;height:120px;\'></div><div class=\'span9\'><h2>" + data.name.toTitleCase() + "</h2><p><span class=\'badge badge-info\'>Funding Goal: " + parseInt(data.goal) + "?</span>" + smallDesc + "</p><br><a class=\'btn pull-right pagination-centered\' data-toggle=\'collapse\' data-parent=\'#accordion" + projectCount + "\' href=\'#collapse" + projectCount + "\'> Read More</a></div></div></div></div><div id=\'collapse" + projectCount + "\' class=\'accordion-body collapse\'><div class=\'accordion-inner\'>" + accordionInner + "</div></div></div></div>";
 
     projectCount++;
     return code;
