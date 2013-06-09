@@ -1,6 +1,6 @@
 var kiezDAO;
 var projectCount=1;
-var imgPath;
+var imgPath = "";
 
 $(document).ready (function () {
     console.log ("running the projecth script");
@@ -13,7 +13,7 @@ $(document).ready (function () {
                 
         filepicker.pickAndStore({mimetype:"image/*"},
              {location:"S3"}, function(fpfiles){                            
-                  imgPath = FPFile.url;
+                  imgPath = fpfiles.url;
         });
      });
      
