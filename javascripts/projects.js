@@ -43,7 +43,7 @@ $(document).ready (function () {
         location.href = "index.html";
     }
     else {
-        console.log (fireurl);
+        console.log (fireurl);        
 
         kiezDAO.on('child_added',function (snapshot) {
             var msgData = snapshot.val();
