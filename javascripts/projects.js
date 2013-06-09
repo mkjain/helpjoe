@@ -7,6 +7,10 @@ $(document).ready (function () {
     
     var zipCode = getQueryVariable("zip");
     
+    var fireurl = 'https://4kiez.firebaseio.com/zips/' + zipCode;
+
+    kiezDAO = new Firebase(fireurl);
+    
     $("#uploadImage").click (function () {
         filepicker.setKey('ApwLQtdpTM6omKwCw8DyQz');
                 
@@ -24,22 +28,22 @@ $(document).ready (function () {
         var name = $("#inputName").val ();
         var description = $("#inputDescription").val ();
         
+         var addfireurl = 'https://4kiez.firebaseio.com/zips/';
+
+        addDAO = new Firebase(addfireurl);
+        
         console.log (imgPath);
         
-        kiezDAO.child (zip).push ({name : name, description : description, vote : 0, imgPath : imgPath}); 
+        addDAO.child (zip).push ({name : name, description : description, vote : 0, imgPath : imgPath}); 
 
-        //window.location = "http://www.4kiez.de/projects.html?zip=" + zip;
+        window.location = "http://www.4kiez.de/projects.html?zip=" + zip;
     });
     
     if (zipCode == null) {
         location.href = "index.html";
     }
     else {
-
-    
-        var fireurl = 'https://4kiez.firebaseio.com/zips/' + zipCode;
-
-        kiezDAO = new Firebase(fireurl);
+        console.log (fireurl);
 
         kiezDAO.on ('child_added',function (snapshot) {
             var msgData = snapshot.val();
@@ -48,9 +52,6 @@ $(document).ready (function () {
             $("#project_list").append (renderProjects(msgData));
         });
     }
-    
-    
-    
 });
 
 function getQueryVariable(variable) {
